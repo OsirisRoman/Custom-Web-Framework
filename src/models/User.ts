@@ -26,4 +26,9 @@ export class User extends Model<UserProps> {
       new ApiSync<UserProps>(rootUrl)
     );
   }
+
+  setRandomAge(): void {
+    const age = Math.round(Math.random() * 100);
+    this.set({ age });
+  }
 }
